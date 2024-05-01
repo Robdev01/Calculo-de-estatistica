@@ -34,7 +34,25 @@ def calcular_desvio_padrao(dados):
     soma_quadrados = sum((x - media) ** 2 for x in dados)
     variancia = soma_quadrados / len(dados)
     return variancia ** 0.5
+def calcular_variante(dados):
+    media = calcular_media(dados)
+    soma_quadrados = sum((x - media) ** 2 for x in dados)
+    variancia = soma_quadrados / len(dados)
+    return variancia
 
+def calculo_intervalo(dados):
+    dados_ordenados = sorted(dados)
+    primeiro = (dados_ordenados[0])
+    ultimo = (dados_ordenados[-1])
+
+    intervalo = ultimo-primeiro
+    return intervalo
+
+def minimo_maximo(dados):
+    dados_ordenados = sorted(dados)
+    minimo = (dados_ordenados[0])
+    maximo = (dados_ordenados[-1])
+    return minimo, maximo
 
 
 # Obtendo os dados do usuário
@@ -48,4 +66,7 @@ print("Média:", calcular_media(dados))
 print("Mediana:", calcular_mediana(dados))
 print("Moda:", calcular_moda(dados))
 print("Desvio Padrão:", calcular_desvio_padrao(dados))
+print("Variante", calcular_variante(dados))
+print("Intervalo", calculo_intervalo(dados))
+print("Valor minimo e maximo", minimo_maximo(dados))
 
