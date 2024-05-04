@@ -34,6 +34,7 @@ def calcular_desvio_padrao(dados):
     soma_quadrados = sum((x - media) ** 2 for x in dados)
     variancia = soma_quadrados / len(dados)
     return variancia ** 0.5
+
 def calcular_variante(dados):
     media = calcular_media(dados)
     soma_quadrados = sum((x - media) ** 2 for x in dados)
@@ -54,14 +55,17 @@ def minimo_maximo(dados):
     maximo = (dados_ordenados[-1])
     return minimo, maximo
 
+def valor_em_ordem(dados):
+    dados_ordenados = sorted(dados)
+    return dados_ordenados
 
 # Obtendo os dados do usuário
 dados = obter_dados_do_user()
 
 
-
 # Exibindo os resultados
 print("Os números informados são", dados)
+print("Dados informado em ordem decrecente", valor_em_ordem(dados))
 print("Média:", calcular_media(dados))
 print("Mediana:", calcular_mediana(dados))
 print("Moda:", calcular_moda(dados))
@@ -69,4 +73,3 @@ print("Desvio Padrão:", calcular_desvio_padrao(dados))
 print("Variante", calcular_variante(dados))
 print("Intervalo", calculo_intervalo(dados))
 print("Valor minimo e maximo", minimo_maximo(dados))
-
