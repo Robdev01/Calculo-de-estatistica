@@ -20,7 +20,7 @@ Valor Mínimo e Máximo: Identifica os valores mínimo e máximo presentes nos d
 
 Como Usar:
 
-Clone este repositório: git clone https://github.com/seu_usuario/seu_repositorio.git
+Clone este repositório;
 
 Navegue até o diretório do projeto: cd seu_repositorio
 
